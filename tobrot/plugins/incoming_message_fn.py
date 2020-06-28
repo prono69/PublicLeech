@@ -31,9 +31,8 @@ async def incoming_message_f(client, message):
     """/leech command"""
     i_m_sefg = await message.reply_text("processing", quote=True)
     is_zip = False
-    if len(message.command) > 1:
-        if message.command[1] == "archive":
-            is_zip = True
+    if len(message.command) > 1 and message.command[1] == "archive":
+        is_zip = True
     # get link from the incoming message
     dl_url, cf_name = extract_link(message.reply_to_message)
     LOGGER.info(dl_url)

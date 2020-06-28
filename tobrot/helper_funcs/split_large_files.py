@@ -71,7 +71,7 @@ async def split_large_files(input_file):
             ))
             start_time = end_time
             end_time = end_time + minimum_duration
-            i = i + 1
+            i += 1
     else:
         # handle normal files here
         o_d_t = os.path.join(
